@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+	<title>music extension</title>
+		<style type = "text/css">
+			body {
+				min-width: 225px;
+			}
+	
+			#main form table tr td{
+				border: 1px solid grey;
+			}
+			
+			#td_search{
+				text-align: center;
+			}
+		</style>
+		<script src="popup.js"></script>
+	</head>
+	<body>
+		<div id = "main">
+			<form>
+				<table>
+					<tr>
+						<td>Search:
+						<input type="text" name="songname" id="query"/></td>
+					</tr>
+					<tr>
+	                    <td id="td_search"><button>Search</button></td>
+					</tr>	
+					<tr>
+						<td><input type="checkbox" name="music" value="music" id="music">Music
+						
+						<input type="checkbox" name="video" value="video" id="video">video
+
+						<input type="checkbox" name="books" value="books" id="books">books</td>
+					</tr>				
+				<table>
+			</form>
+		</div>
+	</body>
+	</html>

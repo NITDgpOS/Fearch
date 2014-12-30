@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "One-click music search",
+  "description": "This extension finds music for us",
+  "version": "1.0",
+
+  "permissions": [
+    "https://www.google.com/"
+  ],
+  "browser_action": {
+    "default_icon": "music.png",
+    "default_popup": "popup.html"
+  }
+}
