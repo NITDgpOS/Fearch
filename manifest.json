@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-
+  "icons": {"128": "icon.png"},
   "name": "One-click music search",
   "description": "This extension finds music for us",
   "version": "1.0",
@@ -9,7 +9,7 @@
     "https://www.google.com/"
   ],
   "browser_action": {
-    "default_icon": "music.png",
+    "default_icon": "icon.png",
     "default_popup": "popup.html"
   }
 }
