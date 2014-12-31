@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "icons": {"128": "icon.png"},
-  "name": "One-click music search",
-  "description": "This extension finds music for us",
+  "name": "Instant search",
+  "description": "This extension finds music,videos,books for us instantly",
   "version": "1.0",
 
   "permissions": [
