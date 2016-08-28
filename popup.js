@@ -17,7 +17,7 @@ function register(){
 	else
 		set3='';
 
-	window.open("http://www.google.com/webhp?#q="+query+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+set1+set2+set3+")&btnI=I");
+	window.open("http://www.google.com/webhp?#q="+query+set1+set2+set3+"&btnI=I");
 }
 
 document.addEventListener('DOMContentLoaded', function () {document.querySelector('button').addEventListener('click', register); });
