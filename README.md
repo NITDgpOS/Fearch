@@ -18,7 +18,7 @@ You can post bugs found in the extension here: https://github.com/NIT-dgp/chrome
 
 ## Get Involved
 
-We would love to have you work with us. Check out the development wiki page for more in-depth details about contributing code and fixing bugs.
+We would love to have you work with us. Check out the development wiki page for more in-depth details about contributing code and fixing bugs. You can find us on the NIT-dgp [#general](https://gitter.im/NIT-dgp/General) gitter channel.
 
 ## License
 
