@@ -1,0 +1,30 @@
+{
+  "name": "chrome-search-extension",
+  "version": "0.1.0",
+  "description": "Searches FTP servers over the web for music, videos, eBooks and other content.",
+  "main": "popup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NIT-dgp/chrome-search-extension.git"
+  },
+  "keywords": [
+    "chrome",
+    "extension"
+  ],
+  "author": "Sparsh Paliwal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NIT-dgp/chrome-search-extension/issues"
+  },
+  "homepage": "https://github.com/NIT-dgp/chrome-search-extension#readme",
+  "devDependencies": {
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb-base": "^9.0.0",
+    "eslint-plugin-import": "^2.1.0",
+    "grunt": "^1.0.1",
+    "grunt-eslint": "^19.0.0"
+  }
+}
