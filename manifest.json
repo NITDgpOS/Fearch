@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "icons": {"128": "icon.png"},
   "name": "Instant search",
-  "description": "This extension finds music,videos,books for us instantly",
+  "description": "Search FTP servers over the web for music, videos, eBooks and other content.",
   "version": "1.0",
 
   "permissions": [
