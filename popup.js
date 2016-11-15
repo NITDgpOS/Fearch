@@ -5,11 +5,11 @@ function register(){
 	var query = document.getElementById("query").value;
 
 	if(document.getElementById("music").checked == true)
-		set1='mp3';
+		set1='mp3|wav|m4a|ogg|wma|flac';
 	else
 		set1='';
 	if(document.getElementById("video").checked == true)
-		var set2='|mkv|mp4|avi';
+		var set2='|mkv|mp4|avi|webm|flv|mov|mpg|mpeg';
 	else
 		set2='';
    	if(document.getElementById("books").checked == true)
