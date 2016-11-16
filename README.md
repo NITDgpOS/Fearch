@@ -1,1 +1,0 @@
-# firefox-search-extension
