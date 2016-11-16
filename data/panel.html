@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#header {
+				text-align: center;
+				padding: 1px;
+				color: white;
+				text-shadow: 2px 2px 8px white;
+				font-family: verdana;
+				font-size: 20px;
+				background-color: #3f51b5;
+			}
+			#main {
+				background-color: white;
+				box-shadow: 10px 10px 5px #888888;
+				font-family: verdana;
+				font-size: 15px;
+				padding-bottom: 10px;
+			}
+			#query {
+				padding-top: 10px;
+				margin-left: 2px;
+
+			}
+			#search-btn {
+				margin-left: 8px;
+				background-color: #3d5afe;
+				box-shadow: 4px 4px 10px #7986cb;
+				padding: 8px;
+				color: white;
+				
+			}
+			#search-btn:hover {
+				background-color: #7986cb;
+				box-shadow: 6px 6px 8px #3949ab;
+				text-shadow: 3px 3px 5px black;
+				cursor: pointer;
+
+			}
+			#query-input {
+				width: 60%;
+				box-shadow: 2px 2px 6px black;
+				margin-left: 5px
+			}
+			#options {
+				margin-top: 10px;
+			}
+			.format {
+				margin: 5px;
+				box-shadow: 2px 2px 6px black;
+				margin-left: 5px;
+			}
+			#music-format {
+				display: none;
+				width: 90%;
+			}
+			#video-format {
+				display: none;
+				width: 90%;
+			}
+			#book-format {
+				display: none;
+				width: 90%;
+			}
+			label {
+				font-size: 18px;
+				font-family: verdana;
+			}
+
+		</style>
+
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function () {
+				document.getElementById('music-input').addEventListener('change', function(){
+					if(document.getElementById("music-input").checked == true) {
+						document.getElementById("music-format").style.display = "block";
+					}
+					else {
+						document.getElementById("music-format").style.display = "none";
+					}
+				});
+				document.getElementById('video-input').addEventListener('change', function() {
+					if(document.getElementById("video-input").checked == true) {
+						document.getElementById("video-format").style.display = "block";
+					}
+					else {
+						document.getElementById("video-format").style.display = "none";
+					}
+				});
+				document.getElementById('book-input').addEventListener('change', function() {
+					if(document.getElementById("book-input").checked == true) {
+						document.getElementById("book-format").style.display = "block";
+					}
+					else {
+						document.getElementById("book-format").style.display = "none";
+					}
+				});
+				document.getElementById("search-btn").onclick = function() {
+					var set1,set2,set3;
+	
+					var query = document.getElementById("query-input").value;
+					if(document.getElementById("music-input").checked == true) {
+						set1 = 'mp3';
+						var value = document.getElementById("music-format").value;
+						if (value != '') {
+							set1 = "";
+							value = value.trim();
+							var music_options = value.split(",");
+							for (var i=0;i<music_options.length;i++) {
+								set1 += music_options[i].trim() + "|"
+							}
+							set1 = set1.substring(0, set1.length - 1);
+						}
+					}
+					else
+						set1 = '';
+					
+					if(document.getElementById("video-input").checked == true) {
+						set2='|mkv|mp4|avi';
+						var value = document.getElementById("video-format").value;
+						if (value != '') {
+							set2 = "";
+							value = value.trim();
+							var video_options = value.split(",");
+							for (var i=0;i<video_options.length;i++) {
+								set2 += video_options[i].trim() + "|";
+							}
+							set2 = "|" + set2.substring(0, set2.length - 1);
+						}
+					}
+					else
+						set2 = '';
+					
+
+					if(document.getElementById("book-input").checked == true) {
+						set3='|epub|pdf';
+						var value = document.getElementById("book-format").value;
+						if (value != '') {
+							set3 = "";
+							value = value.trim();
+							var books_options = value.split(",");
+							for (var i=0;i<books_options.length;i++) {
+								set3 += books_options[i].trim() + "|";
+							}
+							set3 = "|" + set3.substring(0, set3.length - 1);
+						}
+					}
+					else
+						set3 = '';
+					window.open("http://www.google.com/webhp?#q="+query+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+set1+set2+set3+")&btnI=I");
+				}
+			});
+
+		</script>
+	</head>
+
+	<body>
+		<div id = "header">
+			<h2>
+				Instant Search
+			</h2>
+		</div>	
+		<div id = "main">
+			<div id = "query">
+				<input type = "text" placeholder="Search" id = "query-input">
+				<span id = "search-btn">
+					Search
+				</span>	
+			</div>
+			<div id = "options">
+				<div id = "music-options">
+					<input type = "checkbox" id = "music-input" name = "Music">
+					<label for = "music-input">Music</label>
+					<input type = "text" placeholder = "Enter music formats seperated by comma" id = "music-format" class = "format">
+				</div>
+				<div id = "video-options">
+					<input type = "checkbox" id = "video-input" name = "Video">
+					<label for = "video-input">Video</label>
+					<input type = "text" placeholder = "Enter video formats seperated by comma" id = "video-format" class = "format">
+				</div>
+				<div id = "book-options">
+					<input type = "checkbox" id = "book-input" name = "Books">
+					<label for = "book-input">Books</label>
+					<input type = "text" placeholder = "Enter books formats seperated by comma" id = "book-format" class = "format">
+				</div>
+			</div>
+		</div>
+		<div id = "footer">
+			<div id = "status">
+			</div>
+		</div>
+	</body>
+</html>
