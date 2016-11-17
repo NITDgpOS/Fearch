@@ -1,0 +1,71 @@
+#header{
+	font-size:200%;
+	height:60px;
+	width:385px;
+	background-color:#FF5A00;	
+	color:white;
+	text-align:center;
+}			
+body {
+	min-width: 379px;
+	font-size: 180%;
+
+}
+
+#query {
+	padding: 10px;
+	border: solid 2px #969696;
+	transition: border 0.3s;
+}
+
+#query:focus,#query.focus {
+	border: solid 2px #969696;
+}
+
+#main form table{
+	width:385px;
+	color:white;
+	background-color:#FFAE00;
+}
+
+#main #query{
+	font-size:100%;
+	width:270px;
+}
+
+#main form table tr td{
+	height:40px;
+	text-align:center;
+	
+}
+
+#main form table tr td button{
+	   allign
+	   display:block;
+   width:80px;
+   height:80px;
+   line-height:50px;
+   border: 2px solid #f5f5f5;
+   border-radius: 50%;
+   color:#f5f5f5;
+   text-align:center;
+   text-decoration:none;
+   background: #464646;
+   box-shadow: 0 0 3px gray;
+   font-size:70%;
+   font-weight:bold;
+}
+
+#main form table tr td button:hover {
+background: #262626;
+}
+
+#td_search{
+	text-align: center;
+}
+
+#music,#video,#books{
+	width: 28px;
+	height: 28px;
+	background: #fcfff4;	
+	}		
