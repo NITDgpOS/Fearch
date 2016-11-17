@@ -7,43 +7,42 @@
 				font-size:200%;
 				height:60px;
 				width:385px;
-				background-color:#FF5A00;	
+				background-color:#FF5A00;
 				color:white;
 				text-align:center;
-			}			
+			}
 			body {
 				min-width: 379px;
 				font-size: 180%;
-			
 			}
-			
+
 			#query {
   				padding: 10px;
   				border: solid 2px #969696;
   				transition: border 0.3s;
 			}
-			
+
 			#query:focus,#query.focus {
   				border: solid 2px #969696;
 			}
-			
+
 			#main form table{
 				width:385px;
 				color:white;
 				background-color:#FFAE00;
 			}
-			
+
 			#main #query{
 				font-size:100%;
 				width:270px;
 			}
-			
+
 			#main form table tr td{
 				height:40px;
 				text-align:center;
-				
+
 			}
-			
+
 			#main form table tr td button{
 				   allign
 				   display:block;
@@ -60,22 +59,30 @@
     			   font-size:70%;
     			   font-weight:bold;
 			}
-			
+
 			#main form table tr td button:hover {
     			background: #262626;
 			}
-			
+
 			#td_search{
 				text-align: center;
 			}
-			
+
 			#music,#video,#books{
 				width: 28px;
 				height: 28px;
-				background: #fcfff4;	
-				}		
+				background: #fcfff4;
+				}
+			#footer{
+				font-size: 50%;
+				text-align: center;
+				background-color:red;
+				min-height: 20px;
+				color: white;
+				padding-top: 7px;
+				padding-bottom: 7px;
+			}
 		</style>
-		<script src="popup.js"></script>
 	</head>
 	<body>
 		<div id="header">Instant Search</div>
@@ -86,17 +93,19 @@
 						<td>
 						<input type="text" name="songname" id="query" placeholder="Search here"/></td>
 	                    <td id="td_search"><button>Search</button></td>
-					</tr>	
+					</tr>
 					<tr>
 						<td colspan="2"><input type="checkbox" name="music" value="music" id="music">Music
-						
+
 						<input type="checkbox" name="video" value="video" id="video">Video
 
 						<input type="checkbox" name="books" value="books" id="books">Book</td>
-					</tr>				
+					</tr>
 				<table>
 			</form>
 		</div>
-	<div id="footer"></div>
+	<div id="footer">
+	</div>
+		<script src="popup.js"></script>
 	</body>
 	</html>
