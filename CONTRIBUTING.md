@@ -16,6 +16,7 @@ If Firefox can not be located or you have installed Firefox Developer as an alte
 jpm run -b /usr/bin/firefox
 
 ```
+To know about add-on development in details do visit [MDN Add-on SDK](https://developer.mozilla.org/en-US/Add-ons/SDK)
 
 firefox-search-extention is in its very early development stage, you can go over the issues on the 
 github issues page and send in a PR.
