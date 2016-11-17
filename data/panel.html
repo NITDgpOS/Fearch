@@ -63,6 +63,15 @@
 				display: none;
 				width: 90%;
 			}
+			#status {
+				margin-left: 5px;
+				border: 2px solid #7986cb;
+				padding: 1px;
+				display: none;
+				margin-top: 10px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+			}
 			label {
 				font-size: 18px;
 				font-family: verdana;
@@ -98,6 +107,7 @@
 				});
 				document.getElementById("search-btn").onclick = function() {
 					var set1,set2,set3;
+					document.getElementById("status").style.display = "none";
 	
 					var query = document.getElementById("query-input").value;
 					if(document.getElementById("music-input").checked == true) {
@@ -148,6 +158,16 @@
 					}
 					else
 						set3 = '';
+					if(query == '') {
+						document.getElementById("status").style.display = "block";
+						document.getElementById("status").innerHTML = "Please enter something to search!!";
+						return;
+					}
+					if(set1 == '' && set2 == '' && set3 == '') {
+						document.getElementById("status").style.display = "block";
+						document.getElementById("status").innerHTML = "Please select an option!!";
+						return;
+					}
 					window.open("http://www.google.com/webhp?#q="+query+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+set1+set2+set3+")&btnI=I");
 				}
 			});
@@ -168,6 +188,8 @@
 					Search
 				</span>	
 			</div>
+			<div id = "status">
+			</div>
 			<div id = "options">
 				<div id = "music-options">
 					<input type = "checkbox" id = "music-input" name = "Music">
@@ -184,10 +206,6 @@
 					<label for = "book-input">Books</label>
 					<input type = "text" placeholder = "Enter books formats seperated by comma" id = "book-format" class = "format">
 				</div>
-			</div>
-		</div>
-		<div id = "footer">
-			<div id = "status">
 			</div>
 		</div>
 	</body>
