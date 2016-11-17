@@ -20,4 +20,9 @@ function register(){
 	window.open("http://www.google.com/webhp?#q="+query+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+set1+set2+set3+")&btnI=I");
 }
 
-document.addEventListener('DOMContentLoaded', function () {document.querySelector('button').addEventListener('click', register); });
+document.addEventListener('DOMContentLoaded', function () {
+	document.querySelector('button').addEventListener('click', register); 
+	document.getElementById('query').addEventListener('change', function() {
+		document.getElementById('error').innerHTML = '';
+	});
+});
