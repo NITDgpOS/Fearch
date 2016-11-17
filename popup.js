@@ -17,7 +17,13 @@ function register(){
 	else
 		set3='';
 
-	window.open("http://www.google.com/webhp?#q="+query+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+set1+set2+set3+")&btnI=I");
+	var formats = set1 + set2 + set3;
+	var query_split = query.split(".");
+	var suggested_format = query_split[1];
+	query = query_split[0];
+	formats = formats + '|' + suggested_format;
+
+	window.open("http://www.google.com/webhp?#q="+query+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")&btnI=I");
 }
 
 document.addEventListener('DOMContentLoaded', function () {document.querySelector('button').addEventListener('click', register); });
