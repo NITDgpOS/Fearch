@@ -12,6 +12,9 @@ h1{
   font-size: 14px;
   margin-left: 20px;
 }
+#forum1{
+  padding-top: 10px;
+}
 /* basic stylings ------------------------------------------ */
 body 				 { background:url(http://scotch.io/wp-content/uploads/2014/07/61.jpg); float: left;}
 .container 		{ 
@@ -28,13 +31,16 @@ button {
   display: inline-block;
   margin: 0 1px 0 0;
   padding: 4px 8px;
-  font-size: 15px;
-  font-family: "Roboto",serif;
+  font-size: 13px;
+  font-family: arial,sans-serif;
+  font-weight: bold;
   line-height: 1.8;
   appearance: none;
   box-shadow: none;
   border-radius: 0;
   margin-left: 120px;
+  margin-top: 10px;
+  border: none;
 }
 
 button:focus {
@@ -42,18 +48,18 @@ button:focus {
 }
 
 .border button {
-  color: #000;
-  background: rgba(0,0,0,0);
-  border-color: #fff;
+  color: #757575;
+  background: #f5f5f5;
+  border:none;
 }
 .border button:hover,
 .border button.hover {
   /*border-color: #343638;*/
-  color: #343638;
+  color: #000;
 }
 .border button:active,
 .border button.active {
-  border-color: #121314;
+  /*border-color: #121314;*/
   color: #121314;
 }
 
