@@ -1,19 +1,16 @@
 /* { box-sizing:border-box; }*/
 
 h1{
-  font-family: "Roboto";
-  font-weight: light;
+  font-family: "Source Sans Pro";
+  font-size: 34px;
   padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 0;
+  text-align: center;
 }
-.hi{
-  display: inline-block;
-}
-.pure-button{
-  border: none;
-}
-
 #table2{
-  font-size: 17px;
+  font-size: 14px;
+  margin-left: 20px;
 }
 /* basic stylings ------------------------------------------ */
 body 				 { background:url(http://scotch.io/wp-content/uploads/2014/07/61.jpg); float: left;}
@@ -23,6 +20,7 @@ body 				 { background:url(http://scotch.io/wp-content/uploads/2014/07/61.jpg); 
   margin:0px auto 0; 
   display:block; 
   background:#FFF;
+  padding: 0px 15px 10px 15px;
 }
 
 /* Oher Box */
@@ -36,6 +34,7 @@ button {
   appearance: none;
   box-shadow: none;
   border-radius: 0;
+  margin-left: 120px;
 }
 
 button:focus {
@@ -45,7 +44,7 @@ button:focus {
 .border button {
   color: #000;
   background: rgba(0,0,0,0);
-  border-color: #fff
+  border-color: #fff;
 }
 .border button:hover,
 .border button.hover {
