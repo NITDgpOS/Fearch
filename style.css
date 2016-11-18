@@ -1,0 +1,156 @@
+/* { box-sizing:border-box; }*/
+
+h1{
+  font-family: "Roboto";
+  font-weight: light;
+  padding-bottom: 10px;
+}
+.hi{
+  display: inline-block;
+}
+.pure-button{
+  border: none;
+}
+
+#table2{
+  font-size: 17px;
+}
+/* basic stylings ------------------------------------------ */
+body 				 { background:url(http://scotch.io/wp-content/uploads/2014/07/61.jpg); float: left;}
+.container 		{ 
+  font-family:'Roboto';
+  width:300px; 
+  margin:0px auto 0; 
+  display:block; 
+  background:#FFF;
+}
+
+/* Oher Box */
+button {
+  display: inline-block;
+  margin: 0 1px 0 0;
+  padding: 4px 8px;
+  font-size: 15px;
+  font-family: "Roboto",serif;
+  line-height: 1.8;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+button:focus {
+  outline: none
+}
+
+.border button {
+  color: #000;
+  background: rgba(0,0,0,0);
+  border-color: #fff
+}
+.border button:hover,
+.border button.hover {
+  /*border-color: #343638;*/
+  color: #343638;
+}
+.border button:active,
+.border button.active {
+  border-color: #121314;
+  color: #121314;
+}
+
+/* form starting stylings ------------------------------- */
+.group 			  { 
+  position:relative; 
+  margin-bottom:25px; 
+}
+#query{
+  width: 300px;
+}
+input 				{
+  font-size:18px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+labelv  				 {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+#music,#video,#books{
+        background: #fcfff4;  
+        }
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}

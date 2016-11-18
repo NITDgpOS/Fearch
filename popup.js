@@ -5,7 +5,7 @@ function register(){
 	var query = document.getElementById("query").value;
 
 	if(document.getElementById("music").checked == true)
-		set1='mp3';
+		set1='mp3|m4a|flac';
 	else
 		set1='';
 	if(document.getElementById("video").checked == true)
