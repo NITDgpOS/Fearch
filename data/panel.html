@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<head>
 		<style>
 			#header {
@@ -7,14 +8,14 @@
 				padding: 1px;
 				color: white;
 				text-shadow: 2px 2px 8px white;
-				font-family: verdana;
+				font-family: calibri;
 				font-size: 20px;
 				background-color: #3f51b5;
 			}
 			#main {
 				background-color: white;
 				box-shadow: 10px 10px 5px #888888;
-				font-family: verdana;
+				font-family: calibri;
 				font-size: 15px;
 				padding-bottom: 10px;
 			}
@@ -23,7 +24,7 @@
 				margin-left: 2px;
 
 			}
-			
+
 			.button {
 				border-radius: 4px;
 				background-color: #3f51b5;
@@ -78,12 +79,13 @@
 			#options {
 				margin-top: 10px;
 			}
-			
-			
+
+
 			#status {
-				margin-left: 4px;
-				margin-right: 9px;
-				border: 2px solid #7986cb;
+				margin-left: 1.5px;
+				margin-right: 1.5px;
+				color: #ffffff;
+				background-color: #ff0000;
 				padding: 1px;
 				display: none;
 				margin-top: 10px;
@@ -110,35 +112,35 @@
 				document.getElementById("search-btn").onclick = function() {
 					var set1,set2,set3;
 					document.getElementById("status").style.display = "none";
-	
+
 					var query = document.getElementById("query-input").value;
 					if(document.getElementById("music-input").checked == true) {
 						set1 = 'mp3';
 					}
 					else
 						set1 = '';
-					
+
 					if(document.getElementById("video-input").checked == true) {
 						set2='|mkv|mp4|avi';
 					}
 					else
 						set2 = '';
-					
+
 
 					if(document.getElementById("book-input").checked == true) {
 						set3='|epub|pdf';
 					}
 					else
 						set3 = '';
-					
+
 					if(query == '') {
 						document.getElementById("status").style.display = "block";
-						document.getElementById("status").innerHTML = "Please enter something to search!!";
+						document.getElementById("status").innerHTML = '<i class="fa fa-exclamation-triangle" style="color: #fff700;" aria-hidden="true" ></i><b> Please enter something to search</b>';
 						return;
 					}
 					if(set1 == '' && set2 == '' && set3 == '') {
 						document.getElementById("status").style.display = "block";
-						document.getElementById("status").innerHTML = "Please select an option!!";
+						document.getElementById("status").innerHTML = '<i class="fa fa-exclamation-triangle" style="color: #fff700;" aria-hidden="true" ></i><b> Please select an option</b>';
 						return;
 					}
 
@@ -152,7 +154,7 @@
 				}
 			});
 
-		</script>		
+		</script>
 	</head>
 
 	<body>
@@ -160,12 +162,13 @@
 			<h2>
 				Instant Search
 			</h2>
-		</div>	
+		</div>
 		<div id = "main">
 			<div id = "query">
 				<input type = "text" placeholder="Search" id = "query-input">
 			</div>
 			<div id = "status">
+
 			</div>
 			<div id = "options">
 				<table>
@@ -175,7 +178,7 @@
 								<input type = "checkbox" id = "music-input" name = "Music">
 								<label for = "music-input">Music</label>
 							</div>
-						</td>	
+						</td>
 						<td>
 							<div id = "video-options">
 								<input type = "checkbox" id = "video-input" name = "Video">
@@ -188,11 +191,11 @@
 								<label for = "book-input">Books</label>
 							</div>
 						</td>
-					</tr>	
+					</tr>
 				</table>
 				<div id = "button-holder">
 					<button id= "search-btn" class="button"><span>Search </span></button>
-				</div>			
+				</div>
 			</div>
 		</div>
 	</body>
