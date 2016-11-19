@@ -1,3 +1,19 @@
+##Getting started
+
+In order to contribute to the firefox version do the following :
+
+Firstly you need to fork the repository to get your own copy
+
+Secondly you need to clone the firefox branch, this can be done as follows:
+
+```
+git clone -b firefox repo-url
+
+```
+
+Now you are all set to hack the code
+
+
 ##Updating the codebase
 
 All the code for the popup panel is located in data/panel.html
@@ -20,6 +36,8 @@ To know about add-on development in details do visit [MDN Add-on SDK](https://de
 
 firefox-search-extention is in its very early development stage, you can go over the issues on the 
 github issues page and send in a PR.
+
+Note: The PR should be sent to the firefox branch and not the master branch
 
 your commits in the PR should be of the form:
 
