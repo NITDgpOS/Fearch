@@ -3,6 +3,7 @@ var data = require("sdk/self").data;
 // file in the "data" directory, and loading the "get-text.js" script
 // into it.
 var panel = require("sdk/panel").Panel({
+  height: 280,
   contentURL: data.url("panel.html"),
   
 
