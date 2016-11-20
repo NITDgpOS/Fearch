@@ -1,7 +1,7 @@
 
 function register(){
 	var set1,set2,set3;
-	
+
 	var query = document.getElementById("query").value;
 
 	if(document.getElementById("music").checked === true)
@@ -26,4 +26,4 @@ function register(){
 	window.open("http://www.google.com/webhp?#q="+query+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")&btnI=I");
 }
 
-document.addEventListener('DOMContentLoaded', function () {document.querySelector('button').addEventListener('click', register); });
+document.addEventListener('DOMContentLoaded', function () {document.querySelector('#search_btn').addEventListener('click', register); });

@@ -1,30 +1,36 @@
 <!doctype html>
 <html>
 	<head>
-	<title>music extension</title>
-	<link href="popup.css" rel="stylesheet" type="text/css">	
-	<script src="popup.js"></script>
+		<title>Fearch v1.0</title>
+		<link href="popup.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+		<script src="popup.js"></script>
 	</head>
-	<body>
-		<div id="header">Instant Search</div>
-		<div id = "main">
-			<form>
-				<table>
-					<tr>
-						<td>
-						<input type="text" name="songname" id="query" placeholder="Search here"/></td>
-	                    <td id="td_search"><button>Search</button></td>
-					</tr>	
-					<tr>
-						<td colspan="2"><input type="checkbox" name="music" value="music" id="music">Music
-						
-						<input type="checkbox" name="video" value="video" id="video">Video
 
-						<input type="checkbox" name="books" value="books" id="books">Book</td>
-					</tr>				
-				<table>
+	<body>
+		<div id = "main">
+			<div class="overlay" id="text-center-head">Fearch</div>
+			<div class="item"><img src="images/pic.jpg" class="img-responsive"></div>
+			<form>
+				<input type="text" class="form-control" name="songname" id="query" placeholder="Search here">
+				<div class="row">
+					<div class="col-xs-8">
+						<div class="checkbox">
+							<label class="checkbox-inline"><input type="checkbox" name="music" value="music" id="music"><b id="check_type">Music</b></label>
+							<label class="checkbox-inline"><input type="checkbox" name="video" value="video" id="video"><b id="check_type">Video</b></label>
+							<label class="checkbox-inline"><input type="checkbox" name="books" value="books" id="books"><b id="check_type">Book</b></label>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<button type="button" id ="search_btn" class="btn btn-info">
+							<span class="glyphicon glyphicon-search"></span> Search
+						</button>
+					</div>
+				</div>
 			</form>
 		</div>
-	<div id="footer"></div>
 	</body>
-	</html>
+</html>
