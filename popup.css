@@ -2,10 +2,10 @@
 	font-size:200%;
 	height:60px;
 	width:385px;
-	background-color:#FF5A00;	
+	background-color:#FF5A00;
 	color:white;
 	text-align:center;
-}			
+}
 body {
 	min-width: 379px;
 	font-size: 180%;
@@ -36,7 +36,7 @@ body {
 #main form table tr td{
 	height:40px;
 	text-align:center;
-	
+
 }
 
 #main form table tr td button{
@@ -67,5 +67,33 @@ background: #262626;
 #music,#video,#books{
 	width: 28px;
 	height: 28px;
-	background: #fcfff4;	
-	}		
+	background: #fcfff4;
+}
+
+#suggest {
+	background-color: #FFAE00;
+	height: 70px;
+}
+
+#suggest-label {
+    background-color: #FF5A00;
+    opacity: 0.5;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    width: 200px;
+    position: absolute;
+    top: 76%;
+    left: 24%;
+    border-radius: 2%;
+    font-family: verdana;
+    font-size: 25px;
+    transition: all 0.5s;
+}
+
+#suggest-label:hover {
+	border-radius: 2%;
+	opacity: 1;
+	width: 300px;
+	left: 11%;
+}
