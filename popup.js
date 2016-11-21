@@ -26,4 +26,34 @@ function register(){
 	window.open("http://www.google.com/webhp?#q="+query+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")&btnI=I");
 }
 
-document.addEventListener('DOMContentLoaded', function () {document.querySelector('button').addEventListener('click', register); });
+document.addEventListener('DOMContentLoaded', function () {
+	document.querySelector('button').addEventListener('click', register);
+	var suggestions = ['Anime',
+					   'Manga',
+					   'TV-Series',
+					   'Pokemon',
+					   'Big Bang',
+					   'Blues',
+					   'Rock',
+					   'Metal',
+					   'AC/DC',
+					   'Pop',
+					   'Soft Rock',
+					   'MJ',
+					   'Pink Floyd',
+					   'The Wall',
+					   'Shakira',
+					   'JeLo',
+					   'Hard Rock',
+					   'Old Blues',
+					   'Tutorials',
+					   'Ebooks',
+					   'Epubs',
+					   'Fiction',
+					   'Thriller',
+					   'Learning',
+					   'Music'];
+
+	var random = Math.floor(Math.random() * suggestions.length);
+	document.getElementById("suggest-label").innerHTML = suggestions[random];
+});

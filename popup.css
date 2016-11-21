@@ -68,4 +68,34 @@ background: #262626;
 	width: 28px;
 	height: 28px;
 	background: #fcfff4;	
-	}		
+}
+
+#suggest {
+	background-color: #FFAE00;
+	height: 70px;
+}
+
+#suggest-label {
+    background-color: #FF5A00;
+    opacity: 0.5;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    width: 200px;
+    position: absolute;
+    top: 76%;
+    left: 24%;
+    border-radius: 8%;
+    font-family: verdana;
+    font-size: 25px;
+    transition: all 0.5s;
+}
+
+#suggest-label:hover {
+	border-radius: 30%;
+	opacity: 1;
+	font-style: italic;
+	box-shadow: 2px 2px 6px #616161;
+	width: 300px;
+	left: 11%;
+}
