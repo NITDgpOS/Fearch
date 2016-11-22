@@ -23,7 +23,7 @@ function register(){
 	query = query_split[0];
 	formats = formats + '|' + suggested_format;
 
-	window.open("http://www.google.com/webhp?#q="+query+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")&btnI=I");
+	window.open("http://www.google.com/search?q="+query+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")");
 }
 
 function suggestion() {

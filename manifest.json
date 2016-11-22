@@ -4,9 +4,15 @@
   "name": "Instant search",
   "description": "Search FTP servers over the web for music, videos, eBooks and other content.",
   "version": "1.0",
+  "web_accessible_resources": ["googleScript.js"],
 
-  "permissions": [
-    "https://www.google.com/"
+  "permissions": ["tabs", "http://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["googleCS.js"],
+      "run_at": "document_end"
+    }
   ],
   "browser_action": {
     "default_icon": "icon.png",
