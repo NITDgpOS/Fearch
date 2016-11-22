@@ -1,3 +1,15 @@
 {
-  "extends": "airbnb-base"
+  "extends": "airbnb-base/legacy",
+  "parserOptions": {
+    "ecmaVersion": 5
+  },
+  "env": {
+    "browser": true,
+    "webextensions": true
+  },
+  "rules": {
+    "no-var": "off",
+    "indent": ["error", 4],
+    "quotes": ["error", "double"]
+  }
 }
