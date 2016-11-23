@@ -50,5 +50,11 @@ panel.on("show", function() {
 
 function handleHide() {
 	  button.state('window', {checked: false});
-	// body...
 }
+
+var pageMod = require("sdk/page-mod");
+
+pageMod.PageMod({
+  include: ["*"],
+  contentScriptFile: "./googleScript.js"
+});
