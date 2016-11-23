@@ -10,6 +10,7 @@
   "rules": {
     "no-var": "off",
     "indent": ["error", 4],
-    "quotes": ["error", "double"]
+    "quotes": ["error", "double"],
+    "linebreak-style": "off"
   }
 }

@@ -1,35 +1,66 @@
 <!doctype html>
 <html>
-	<head>
-	<title>music extension</title>
-	<link href="popup.css" rel="stylesheet" type="text/css">	
-	<script src="popup.js"></script>
-	</head>
-	<body>
-		<div id="header">Instant Search</div>
-		<div id = "main">
-			<form>
-				<table>
-					<tr>
-						<td>
-						<input type="text" name="songname" id="query" placeholder="Search here"/></td>
-	                    <td id="td_search"><button>Search</button></td>
-					</tr>	
-					<tr>
-						<td colspan="2"><input type="checkbox" name="music" value="music" id="music">Music
-						
-						<input type="checkbox" name="video" value="video" id="video">Video
 
-						<input type="checkbox" name="books" value="books" id="books">Book</td>
-					</tr>				
-				<table>
-			</form>
-			<div id = "suggest">
-				<div id = "suggest-label">
-					Manga
-				</div>
-			</div>
-		</div>
-	<div id="footer"></div>
-	</body>
-	</html>
+<head>
+    <title>music extension</title>
+    <link href="popup.css" rel="stylesheet" type="text/css">
+    <script src="popup.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <h1><span style="color:#4285f4">F</span><span style="color:#ea4335">e</span><span style="color:#fbbc05">a</span><span style="color:#4285f4">r</span><span style="color:#34a853">c</span><span style="color:#ea4335">h</span></h1></div>
+    <div id="main">
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <div id="searchBox" class="card">
+                            <input type="text" name="songname" id="query" placeholder="Search here" />
+                            <button id="searchButton">
+                                <img src="searchIcon.png" alt="Search" id="searchIcon">
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="searchWarning" style="display: none;">
+                            &#9762 Please enter search query.
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" name="music" value="music" id="music">
+                        <label for="music">Music</label>
+                        <input type="checkbox" name="video" value="video" id="video">
+                        <label for="video">Video</label>
+                        <input type="checkbox" name="books" value="books" id="books">
+                        <label for="books">Books</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="checkboxWarning" style="display: none;">
+                            &#9762 Please select one or more of the checkboxes.
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="suggest">
+                            <div id="suggest-label">
+                                Manga
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <table>
+        </form>
+    </div>
+    <div id="footer">
+    </div>
+</body>
+
+</html>
