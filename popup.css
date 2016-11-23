@@ -115,7 +115,7 @@ input:focus {
     margin: 0px auto;
     border-radius: 2px;
     left: 30%;
-    bottom: 38%;
+    bottom: 40%;
 }
 
 #checkboxWarning {
@@ -128,5 +128,5 @@ input:focus {
     margin: 0px auto;
     border-radius: 2px;
     left: 18%;
-    bottom: 66px;
+    bottom: 6%;
 }

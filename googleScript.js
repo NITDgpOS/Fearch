@@ -21,7 +21,7 @@ if (pageType === 1) {
     // Injected script for google query page
     document.getElementById("sfdiv").style.display = "none";
     document.getElementById("hdtb-msb").style.display = "none";
-    document.getElementById("hdtbSum").innerHTML = "<div style = 'padding: 13px; font-size: 200%; color: #6a6a6a;'>Each of the link below is a FTP servers. You will find your download inside them only.</div>";
+    document.getElementById("hdtbSum").innerHTML = "<div style = 'padding: 13px; font-size: 200%; color: #6a6a6a;'>All the links below are FTP servers, containing your file, and similar content.<span style='color:#4285f4'> Total Enjoy!!</span></div>";
 } else if (pageType === 2) {
     // Injected script for any FTP server page that opens
 } else {
