@@ -89,7 +89,12 @@ function suggestion() {
         "Old Blues",
         "Fiction",
         "Thriller",
-        "Learning"];
+        "Learning",
+        "Eminem",
+        "Green Day",
+        "Metaliica",
+        "Taylor Swift",
+        "Drake"];
 
     random = Math.floor(Math.random() * suggestions.length);
     document.getElementById("suggest-label").innerHTML = suggestions[random];
