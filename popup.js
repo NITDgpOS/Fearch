@@ -23,6 +23,9 @@ function register() {
     var suggestedFormat;
 
     query = document.getElementById("query").value;
+    query = encodeURIComponent(query);
+    // Note :- avoid hardcoded uuid.
+    uuid = "8fd531a3ba79466f8a80e5c71dea9723"
     check1 = document.getElementById("music").checked;
     check2 = document.getElementById("video").checked;
     check3 = document.getElementById("books").checked;
@@ -57,7 +60,7 @@ function register() {
         formats = formats + "|" + suggestedFormat;
 
         /* eslint-disable */
-        window.open("http://www.google.com/search?q="+query+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")");
+        window.open("http://www.google.com/search?q="+query+" -"+uuid+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")");
         /* eslint-enable */
     } else {
         document.getElementById("searchWarning").style.display = "none";
@@ -105,4 +108,3 @@ document.addEventListener("DOMContentLoaded", function () {
     suggestion();
     suggestionAsValue();
 });
-
