@@ -130,3 +130,24 @@ input:focus {
     left: 18%;
     bottom: 6%;
 }
+
+
+
+#index, #index:hover {
+	text-underline: none;
+}
+
+#index {
+	padding: 5px;
+	color: #c2c2a3;
+	font-weight: weight;
+	
+}
+
+#index:hover {
+	color: #2e2e1f;
+	border: 1px solid #2e2e1f;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
