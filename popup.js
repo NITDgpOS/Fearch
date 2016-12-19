@@ -21,11 +21,13 @@ function register() {
     var formats;
     var querySplit;
     var suggestedFormat;
+	  var index;
 
     query = document.getElementById("query").value;
     check1 = document.getElementById("music").checked;
     check2 = document.getElementById("video").checked;
     check3 = document.getElementById("books").checked;
+	index = document.getElementById("index").value;
 
     // Warning messages
     if (query === "") {
@@ -102,7 +104,17 @@ function suggestion() {
 
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("button").addEventListener("click", register);
+	document.getElementById('index').addEventListener("click", showIndex);
     suggestion();
     suggestionAsValue();
 });
+
+function showIndex() {
+       var index_url = "https://www.google.com/doodles";
+       chrome.tabs.create({
+       url: index_url
+    });
+ }
+
+
 
