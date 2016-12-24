@@ -21,6 +21,7 @@ function register() {
     var formats;
     var querySplit;
     var suggestedFormat;
+    var dotCheck;
 
     query = document.getElementById("query").value;
     query = encodeURIComponent(query);
@@ -29,13 +30,15 @@ function register() {
     check1 = document.getElementById("music").checked;
     check2 = document.getElementById("video").checked;
     check3 = document.getElementById("books").checked;
+    querySplit = query.split(".");
+    dotCheck = querySplit.length > 1 ? true : false;
 
     // Warning messages
     if (query === "") {
         document.getElementById("searchWarning").style.display = "block";
         document.getElementById("checkboxWarning").style.display = "none";
         event.preventDefault();
-    } else if (check1 || check2 || check3) {
+    } else if (check1 || check2 || check3 || dotCheck) {
         // query logic
         if (document.getElementById("music").checked === true) {
             set1 = "mp3|wav|m4a|ogg|wma|flac";
@@ -52,13 +55,12 @@ function register() {
         } else {
             set3 = "";
         }
-
         formats = set1 + set2 + set3;
-        querySplit = query.split(".");
-        suggestedFormat = querySplit[1];
-        query = querySplit[0];
-        formats = formats + "|" + suggestedFormat;
-
+        if (dotCheck) {
+            suggestedFormat = querySplit[1];
+            query = querySplit[0];
+            formats = formats + "|" + suggestedFormat;
+        }
         /* eslint-disable */
         window.open("http://www.google.com/search?q="+query+" -"+uuid+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")");
         /* eslint-enable */
