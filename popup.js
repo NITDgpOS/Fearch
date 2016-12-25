@@ -10,7 +10,7 @@ function suggestionAsValue() {
     });
 }
 
-function register() {
+function register(event) {
     var set1;
     var set2;
     var set3;
