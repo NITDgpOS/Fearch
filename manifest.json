@@ -1,7 +1,11 @@
 {
   "manifest_version": 2,
-  "icons": {"128": "icon.png"},
-  "name": "Instant search",
+  "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+  },
+  "name": "Fearch",
   "description": "Search FTP servers over the web for music, videos, eBooks and other content.",
   "version": "1.0",
   "web_accessible_resources": ["googleFearch.js"],
@@ -390,7 +394,7 @@
     }
   ],
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "icon128.png",
     "default_popup": "popup.html"
   }
 }
