@@ -22,16 +22,17 @@ function register(event) {
     var querySplit;
     var suggestedFormat;
     var dotCheck;
+    var uuid;
 
     query = document.getElementById("query").value;
     query = encodeURIComponent(query);
     // Note :- avoid hardcoded uuid.
-    uuid = "8fd531a3ba79466f8a80e5c71dea9723"
+    uuid = "8fd531a3ba79466f8a80e5c71dea9723";
     check1 = document.getElementById("music").checked;
     check2 = document.getElementById("video").checked;
     check3 = document.getElementById("books").checked;
     querySplit = query.split(".");
-    dotCheck = querySplit.length > 1 ? true : false;
+    dotCheck = querySplit.length > 1;
 
     // Warning messages
     if (query === "") {
