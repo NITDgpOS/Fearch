@@ -4,7 +4,7 @@
   "description": "Searches FTP servers over the web for music, videos, eBooks and other content.",
   "main": "popup.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ci:lint": "grunt"
   },
   "repository": {
     "type": "git",
