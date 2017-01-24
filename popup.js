@@ -110,4 +110,12 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("button").addEventListener("click", register);
     suggestion();
     suggestionAsValue();
+    lucky();
 });
+
+function lucky(){
+    var lButton = document.getElementById("imfl");
+    lButton.addEventListener("click",function(){
+        window.open("https://www.google.com/doodles");
+    });
+}
