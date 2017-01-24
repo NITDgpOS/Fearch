@@ -1,10 +1,12 @@
 // I'm feling lucky button
+
 function lucky(){
     var lButton = document.getElementById("imfl");
-    lButton.addEventListener("click", function() {
+    lButton.addEventListener("click", function () {
         window.open("https://www.google.com/doodles");
     });
 }
+
 // Styling content
 
 // Place suggestion in query box
@@ -118,5 +120,3 @@ document.addEventListener("DOMContentLoaded", function () {
     suggestionAsValue();
     lucky();
 });
-
-

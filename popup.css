@@ -132,7 +132,7 @@ input:focus {
     bottom: 6%;
 }
 
-#imfl{
+#imfl {
     padding: 3%;
     padding-left: 5%;
     padding-right: 5%;
@@ -140,7 +140,7 @@ input:focus {
     border-radius: 5%;
     border:0px solid rgba(0,0,0,0.3);
 }
-#imfl:hover{
+#imfl:hover {
     background-color: rgba(0,0,0,0.2);
     border:0px solid rgba(0,0,0,0.5);
 }
