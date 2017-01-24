@@ -1,4 +1,10 @@
-
+// I'm feling lucky button
+function lucky(){
+    var lButton = document.getElementById("imfl");
+    lButton.addEventListener("click", function() {
+        window.open("https://www.google.com/doodles");
+    });
+}
 // Styling content
 
 // Place suggestion in query box
@@ -113,9 +119,4 @@ document.addEventListener("DOMContentLoaded", function () {
     lucky();
 });
 
-function lucky(){
-    var lButton = document.getElementById("imfl");
-    lButton.addEventListener("click",function(){
-        window.open("https://www.google.com/doodles");
-    });
-}
+
