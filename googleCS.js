@@ -1,4 +1,8 @@
-var st, x, pos;
+var st;
+var x;
+var pos;
+var i;
+
 var s = document.createElement("script");
 s.src = chrome.extension.getURL("googleFearch.js");
 (document.head || document.documentElement).appendChild(s);
@@ -7,7 +11,7 @@ s.src = chrome.extension.getURL("googleFearch.js");
 
 x = document.getElementsByClassName("r");
 
-for (var i = 0; i < x.length; i++) {
+for (i = 0; i < x.length; i++) {
 	st = x[i].innerHTML;
 	pos = st.search("Index of /" || "Index of");
 	if (pos !== -1) {
