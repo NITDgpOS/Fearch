@@ -11,7 +11,7 @@ s.src = chrome.extension.getURL("googleFearch.js");
 
 x = document.getElementsByClassName("r");
 
-for (i = 0; i < x.length; i = i + 1) {
+for (i = 0; i < x.length; i++) {
     st = x[i].innerHTML;
     pos = st.search("Index of /" || "Index of");
     if (pos !== -1) {
