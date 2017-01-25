@@ -1,11 +1,3 @@
-// I'm feling lucky button
-
-function lucky(){
-    var lButton = document.getElementById("imfl");
-    lButton.addEventListener("click", function () {
-        window.open("https://www.google.com/doodles");
-    });
-}
 
 // Styling content
 
@@ -118,5 +110,4 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("button").addEventListener("click", register);
     suggestion();
     suggestionAsValue();
-    lucky();
 });
