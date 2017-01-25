@@ -1,8 +1,8 @@
 # chrome-search-extension
 
-A chrome extension that lets you search music, videos, ebooks and other content available on FTP servers. It uses simple google search under the hood with the query modified to look only for FTP servers. We are interested in the content that is freely available on these servers.
+An extension for both Chrome and Firefox that lets you search music, videos, ebooks and other content available on FTP servers. It uses simple google search under the hood with the query modified to look only for FTP servers. We are interested in the content that is freely available on these servers.
 
-## Setup
+## Setup (Chrome)
 
 1. Download or git pull the repo (Unzip if downloaded)
 2. Open Google Chrome and click on the **Customize and control Google Chrome button** (ie the three dot button to the top-left of the application)
@@ -11,6 +11,13 @@ A chrome extension that lets you search music, videos, ebooks and other content 
 5. Click on the **Load unpacked extension...** button.
 6. Browse to the place where you have unziped or pulled the repo in step 1.
 7. Extension is added to your browser. Enjoy !!
+
+## Setup (Firefox)
+
+1. Download or git pull the repo (Unzip if downloaded)
+2. Open Firefox, open **about:debugging** in the url
+3. Click **Load Temporary Add-on** and select any file in your **addon's directory**
+4. Extension is added to your browser. Enjoy !!
 
 ## Issues
 
