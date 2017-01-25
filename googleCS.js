@@ -12,11 +12,11 @@ s.src = chrome.extension.getURL("googleFearch.js");
 x = document.getElementsByClassName("r");
 
 for (i = 0; i < x.length; i++) {
-	st = x[i].innerHTML;
-	pos = st.search("Index of /" || "Index of");
-	if (pos !== -1) {
-		x[i].innerHTML = st.replace(st.substring(pos,pos+10),"");
-	}
+    st = x[i].innerHTML;
+    pos = st.search("Index of /" || "Index of");
+    if (pos !== -1) {
+    x[i].innerHTML = st.replace(st.substring(pos, pos + 10), "");
+}
 }
 
 // After loading and execution, the node disappears so no one can trace code.
