@@ -1,7 +1,7 @@
 HOW TO CONTRIBUTE
 =================
 
-chrome-search-extention is in its very early development stage, you can go over the issues on the github  
+Fearch is in its very early development stage, you can go over the issues on the github  
 issues page and send in a PR.
 
 Your commits in the PR should be of the form:
