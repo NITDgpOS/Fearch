@@ -74,6 +74,10 @@ function register(event) {
         document.getElementById("footer").innerHTML = "Please select at least one of the checkboxes.";
         document.getElementById("footer").style.display = "block";
         event.preventDefault();
+        setTimeout(function()
+          {
+    document.getElementById("footer").style.display = "none";
+}, 5000);
     }
 }
 
