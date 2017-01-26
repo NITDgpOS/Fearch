@@ -6,7 +6,7 @@
 function suggestionAsValue() {
     var sLabel;
     sLabel = document.getElementById("suggest-label");
-    sLabel.addEventListener("click", function() {
+    sLabel.addEventListener("click", function () {
         document.getElementById("query").value = sLabel.innerHTML;
     });
 }
@@ -77,7 +77,7 @@ function register(event) {
     } else {
         document.getElementById("footer").innerHTML = "Please select at least one of the checkboxes.";
         document.getElementById("footer").style.display = "block";
-        setTimeout(function() {
+        setTimeout(function () {
             document.getElementById("footer").style.display = "none";
         }, 5000);
         event.preventDefault();
@@ -119,13 +119,13 @@ function suggestion() {
     document.getElementById("suggest-label").innerHTML = suggestions[random];
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("button").addEventListener("click", register);
     suggestion();
     suggestionAsValue();
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("myLink").addEventListener("click", register);
     suggestion();
     suggestionAsValue();
