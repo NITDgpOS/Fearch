@@ -2,6 +2,14 @@
 // Styling content
 
 // Place suggestion in query box
+document.getElementById("id_of_textbox")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode == 13) {
+        document.getElementById("id_of_button").click();
+    }
+});
+
 function suggestionAsValue() {
     var sLabel;
     sLabel = document.getElementById("suggest-label");
