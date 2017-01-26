@@ -2,13 +2,7 @@
 // Styling content
 
 // Place suggestion in query box
-document.getElementById("id_of_textbox")
-    .addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode == 13) {
-        document.getElementById("id_of_button").click();
-    }
-});
+
 
 function suggestionAsValue() {
     var sLabel;
@@ -71,6 +65,7 @@ function register(event) {
             formats = formats + "|" + suggestedFormat;
         }
         /* eslint-disable */
+
         window.open("http://www.google.com/search?q="+query+" -"+uuid+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")");
         /* eslint-enable */
     } else {
@@ -116,6 +111,12 @@ function suggestion() {
 
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("button").addEventListener("click", register);
+    suggestion();
+    suggestionAsValue();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("myLink").addEventListener("click", register);
     suggestion();
     suggestionAsValue();
 });
