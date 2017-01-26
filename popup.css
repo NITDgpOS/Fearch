@@ -1,3 +1,5 @@
+
+
 #header {
     margin-bottom: 30px;
     font-family: monospace;
@@ -113,8 +115,8 @@ input:focus {
     position: absolute;
     margin: 0px auto;
     border-radius: 2px;
-    left: 30%;
-    bottom: 40%;
+    bottom: 5%;
+    text-align: center;
 }
 
 #checkboxWarning {
@@ -137,7 +139,8 @@ a:visited {
 }
 #myLink {
   font-family: monospace;
-  background:#34a853;
+  color: black;
+  background: #D3D3D3;
 }
 
 
@@ -157,7 +160,7 @@ a.button {
 }
 
 .btnLightBlue {
-  background: #5DC8CD;
+  background: #000000;
 }
 
 
@@ -170,7 +173,7 @@ a.button {
 
 
 .btnLightBlue.btnPush {
-  box-shadow: 0px 5px 0px 0px #1E8185;
+  box-shadow: 0px 5px 0px 0px #00000;
 }
 
 
@@ -271,4 +274,16 @@ a.button {
 }
 #myLink {
   margin-left: 130px;
+}
+
+#footer {
+  padding: 5% 5% 5% 5%;
+  margin: 0px 0px 0px 0px;
+  background: #FF0000;
+  display: none;
+  font-family: monospace;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 15px 15px 15px 15px;
 }

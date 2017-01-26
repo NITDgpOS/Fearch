@@ -38,8 +38,7 @@ function register(event) {
 
     // Warning messages
     if (query === "") {
-        document.getElementById("searchWarning").style.display = "block";
-        document.getElementById("checkboxWarning").style.display = "none";
+        document.getElementById("query").placeholder = "Enetr Search Query";
         event.preventDefault();
     } else if (check1 || check2 || check3 || dotCheck) {
         // query logic
@@ -69,8 +68,8 @@ function register(event) {
         window.open("http://www.google.com/search?q="+query+" -"+uuid+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")");
         /* eslint-enable */
     } else {
-        document.getElementById("searchWarning").style.display = "none";
-        document.getElementById("checkboxWarning").style.display = "block";
+        document.getElementById("footer").innerHTML = "Please select at least one of the checkboxes.";
+        document.getElementById("footer").style.display = "block";
         event.preventDefault();
     }
 }
