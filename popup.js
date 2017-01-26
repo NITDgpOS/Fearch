@@ -64,8 +64,11 @@ function register(event) {
             formats = formats + "|" + suggestedFormat;
         }
         /* eslint-disable */
-
-        window.open("http://www.google.com/search?q="+query+" -"+uuid+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")");
+        var lik = "http://www.google.com/search?q="+query+" -"+uuid+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")";
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        var tab = tabs[0];
+        chrome.tabs.update(tab.id, {url: lik});
+    });
         /* eslint-enable */
     } else {
         document.getElementById("footer").innerHTML = "Please select at least one of the checkboxes.";
