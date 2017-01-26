@@ -1,4 +1,3 @@
-
 // Styling content
 
 // Place suggestion in query box
@@ -7,7 +6,7 @@
 function suggestionAsValue() {
     var sLabel;
     sLabel = document.getElementById("suggest-label");
-    sLabel.addEventListener("click", function () {
+    sLabel.addEventListener("click", function() {
         document.getElementById("query").value = sLabel.innerHTML;
     });
 }
@@ -64,20 +63,24 @@ function register(event) {
             formats = formats + "|" + suggestedFormat;
         }
         /* eslint-disable */
-        var lik = "http://www.google.com/search?q="+query+" -"+uuid+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")";
-        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        var tab = tabs[0];
-        chrome.tabs.update(tab.id, {url: lik});
-    });
+        var lik = "http://www.google.com/search?q=" + query + " -" + uuid + " -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" (" + formats + ")";
+        chrome.tabs.query({
+            active: true,
+            currentWindow: true
+        }, function(tabs) {
+            var tab = tabs[0];
+            chrome.tabs.update(tab.id, {
+                url: lik
+            });
+        });
         /* eslint-enable */
     } else {
         document.getElementById("footer").innerHTML = "Please select at least one of the checkboxes.";
         document.getElementById("footer").style.display = "block";
+        setTimeout(function() {
+            document.getElementById("footer").style.display = "none";
+        }, 5000);
         event.preventDefault();
-        setTimeout(function()
-          {
-    document.getElementById("footer").style.display = "none";
-}, 5000);
     }
 }
 
@@ -109,19 +112,20 @@ function suggestion() {
         "Green Day",
         "Metaliica",
         "Taylor Swift",
-        "Drake"];
+        "Drake"
+    ];
 
     random = Math.floor(Math.random() * suggestions.length);
     document.getElementById("suggest-label").innerHTML = suggestions[random];
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("button").addEventListener("click", register);
     suggestion();
     suggestionAsValue();
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("myLink").addEventListener("click", register);
     suggestion();
     suggestionAsValue();
