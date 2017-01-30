@@ -10,6 +10,40 @@ function suggestionAsValue() {
     });
 }
 
+// Method to keyboard shortcut
+function keyboardShortCutListener(e) {
+    e.preventDefault();
+    if (e.ctrlKey && e.altKey && e.keyCode === 77) {
+        if (document.getElementById("music").checked === true) {
+            document.getElementById("music").checked = false;
+        } else {
+            document.getElementById("music").checked = true;
+        }
+    } else if (e.ctrlKey && e.altKey && e.keyCode === 86) {
+        if (document.getElementById("video").checked === true) {
+            document.getElementById("video").checked = false;
+        } else {
+            document.getElementById("video").checked = true;
+        }
+    } else if (e.ctrlKey && e.altKey && e.keyCode === 66) {
+        if (document.getElementById("books").checked === true) {
+            document.getElementById("books").checked = false;
+        } else {
+            document.getElementById("books").checked = true;
+        }
+    } else if (e.ctrlKey && e.altKey && e.keyCode === 65) {
+        if ((document.getElementById("music").checked === true) && (document.getElementById("video").checked === true) && (document.getElementById("books").checked === true)) {
+            document.getElementById("music").checked = false;
+            document.getElementById("video").checked = false;
+            document.getElementById("books").checked = false;
+        } else {
+            document.getElementById("music").checked = true;
+            document.getElementById("video").checked = true;
+            document.getElementById("books").checked = true;
+        }
+    }
+}
+
 function register(event) {
     var set1;
     var set2;
@@ -108,6 +142,7 @@ function suggestion() {
 
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("button").addEventListener("click", register);
+    document.addEventListener("keyup", keyboardShortCutListener, false);
     suggestion();
     suggestionAsValue();
 });
