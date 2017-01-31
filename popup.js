@@ -1,7 +1,9 @@
+"use strict";
 
 // Styling content
 
 // Place suggestion in query box
+
 function suggestionAsValue() {
     var sLabel;
     sLabel = document.getElementById("suggest-label");
@@ -43,7 +45,17 @@ function keyboardShortCutListener(e) {
         }
     }
 }
-
+        /* eslint-disable */
+function trim(s, mask) {
+    while (~mask.indexOf(s[0])) {
+        s = s.slice(1);
+    }
+    while (~mask.indexOf(s[s.length - 1])) {
+        s = s.slice(0, -1);
+    }
+    return s;
+}
+        /* eslint-enable */
 function register(event) {
     var set1;
     var set2;
@@ -51,6 +63,7 @@ function register(event) {
     var check1;
     var check2;
     var check3;
+    var check4;
     var query;
     var formats;
     var querySplit;
@@ -65,6 +78,7 @@ function register(event) {
     check1 = document.getElementById("music").checked;
     check2 = document.getElementById("video").checked;
     check3 = document.getElementById("books").checked;
+    check4 = document.getElementById("GDrive").checked;
     querySplit = query.split(".");
     dotCheck = querySplit.length > 1;
 
@@ -96,8 +110,19 @@ function register(event) {
             query = querySplit[0];
             formats = formats + "|" + suggestedFormat;
         }
+        formats = trim(formats, "|");
+
         /* eslint-disable */
-        window.open("http://www.google.com/search?q="+query+" -"+uuid+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")");
+        window.open("http://www.google.com/search?q=" + query + " - " + uuid + " -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" (" + formats + ")");
+        if (check4) {
+
+            if ((document.getElementById("video").checked === true) || (document.getElementById("music").checked === true)) {
+            window.open("https://www.google.co.in/#q=" + query + " site:drive.google.com (" + formats + ")");
+
+            } else {
+            window.open("https://www.google.co.in/#q=" + query + " site:docs.google.com (" + formats + ")");
+            }
+        }
         /* eslint-enable */
     } else {
         document.getElementById("searchWarning").style.display = "none";
