@@ -1,7 +1,8 @@
-
 // Styling content
 
 // Place suggestion in query box
+
+
 function suggestionAsValue() {
     var sLabel;
     sLabel = document.getElementById("suggest-label");
@@ -70,8 +71,7 @@ function register(event) {
 
     // Warning messages
     if (query === "") {
-        document.getElementById("searchWarning").style.display = "block";
-        document.getElementById("checkboxWarning").style.display = "none";
+        document.getElementById("query").placeholder = "Enetr Search Query";
         event.preventDefault();
     } else if (check1 || check2 || check3 || dotCheck) {
         // query logic
@@ -97,11 +97,23 @@ function register(event) {
             formats = formats + "|" + suggestedFormat;
         }
         /* eslint-disable */
-        window.open("http://www.google.com/search?q="+query+" -"+uuid+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")");
+        var lik = "http://www.google.com/search?q=" + query + " -" + uuid + " -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" (" + formats + ")";
+        chrome.tabs.query({
+            active: true,
+            currentWindow: true
+        }, function(tabs) {
+            var tab = tabs[0];
+            chrome.tabs.update(tab.id, {
+                url: lik
+            });
+        });
         /* eslint-enable */
     } else {
-        document.getElementById("searchWarning").style.display = "none";
-        document.getElementById("checkboxWarning").style.display = "block";
+        document.getElementById("footer").innerHTML = "Please select at least one of the checkboxes.";
+        document.getElementById("footer").style.display = "block";
+        setTimeout(function () {
+            document.getElementById("footer").style.display = "none";
+        }, 5000);
         event.preventDefault();
     }
 }
@@ -134,7 +146,8 @@ function suggestion() {
         "Green Day",
         "Metaliica",
         "Taylor Swift",
-        "Drake"];
+        "Drake"
+    ];
 
     random = Math.floor(Math.random() * suggestions.length);
     document.getElementById("suggest-label").innerHTML = suggestions[random];
@@ -143,6 +156,12 @@ function suggestion() {
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("button").addEventListener("click", register);
     document.addEventListener("keyup", keyboardShortCutListener, false);
+    suggestion();
+    suggestionAsValue();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("myLink").addEventListener("click", register);
     suggestion();
     suggestionAsValue();
 });
