@@ -1,14 +1,14 @@
 {
   "manifest_version": 2,
   "icons": {
-      "16": "icon16.png",
-      "48": "icon48.png",
-      "128": "icon128.png"
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
   },
   "name": "Fearch",
   "description": "Search FTP servers over the web for music, videos, eBooks and other content.",
   "version": "1.0",
-  "web_accessible_resources": ["googleFearch.js"],
+  "web_accessible_resources": ["scripts/googleFearch.js"],
 
   "permissions": ["*://www.google.com/*",
       "*://www.google.ad/*",
@@ -388,13 +388,13 @@
           "*://www.google.co.zm/*8fd531a3ba79466f8a80e5c71dea9723*",
           "*://www.google.co.zw/*8fd531a3ba79466f8a80e5c71dea9723*",
           "*://www.google.cat/*8fd531a3ba79466f8a80e5c71dea9723*"],
-      "css": ["googleFearch.css"],
-      "js": ["googleCS.js"],
+      "css": ["css/googleFearch.css"],
+      "js": ["scripts/googleCS.js"],
       "run_at": "document_end"
     }
   ],
   "browser_action": {
-    "default_icon": "icon128.png",
-    "default_popup": "popup.html"
+    "default_icon": "icons/icon128.png",
+    "default_popup": "popup/popup.html"
   }
 }
