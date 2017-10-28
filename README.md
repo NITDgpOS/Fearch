@@ -2,6 +2,10 @@
 
 An extension for both Chrome and Firefox that lets you search music, videos, ebooks and other content available on FTP servers. It uses simple google search under the hood with the query modified to look only for FTP servers. We are interested in the content that is freely available on these servers.
 
+## Working GIF
+
+![FEARCH_GIF](demo.gif)
+
 ## Setup (Chrome)
 
 1. Download or git pull the repo (Unzip if downloaded)
