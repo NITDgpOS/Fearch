@@ -9,7 +9,9 @@
   "description": "Search FTP servers over the web for music, videos, eBooks and other content.",
   "version": "1.0",
   "web_accessible_resources": ["scripts/googleFearch.js"],
-
+  "options_ui": {
+    "page": "options/options.html"
+  },
   "permissions": ["*://www.google.com/*",
       "*://www.google.ad/*",
       "*://www.google.ae/*",
