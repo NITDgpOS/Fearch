@@ -140,9 +140,41 @@ function suggestion() {
     document.getElementById("suggest-label").innerHTML = suggestions[random];
 }
 
+var theme;
+
+function themeChange() {
+
+    theme = localStorage.getItem("theme");
+    if(theme == 'light' )
+        localStorage.setItem( "theme" , "dark" );
+    else
+        localStorage.setItem("theme", "light");
+
+    var bg = document.getElementById("content");
+    bg.classList.toggle("dark");
+
+    var labels = document.getElementsByTagName('label');
+    labels[1].classList.toggle("dark-label");
+    labels[2].classList.toggle("dark-label");
+    labels[3].classList.toggle("dark-label");
+
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("button").addEventListener("click", register);
     document.addEventListener("keyup", keyboardShortCutListener, false);
     suggestion();
     suggestionAsValue();
+    if (!localStorage.getItem('theme'))
+        localStorage.setItem('theme', 'light');
+
+    var themeSlider = document.getElementById("check");
+    themeSlider.addEventListener("click", themeChange);
+
+    if(localStorage.getItem("theme") == 'dark')
+    {
+        document.getElementById("check").click();
+        localStorage.setItem( "theme" , "dark" );
+    }
 });
