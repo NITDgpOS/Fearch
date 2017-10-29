@@ -154,9 +154,9 @@ function themeChange() {
     bg.classList.toggle("dark");
 
     var labels = document.getElementsByTagName('label');
+    labels[0].classList.toggle("dark-label");
     labels[1].classList.toggle("dark-label");
     labels[2].classList.toggle("dark-label");
-    labels[3].classList.toggle("dark-label");
 
 }
 
@@ -169,12 +169,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!localStorage.getItem('theme'))
         localStorage.setItem('theme', 'light');
 
-    var themeSlider = document.getElementById("check");
-    themeSlider.addEventListener("click", themeChange);
-
     if(localStorage.getItem("theme") == 'dark')
     {
-        document.getElementById("check").click();
+        themeChange();
         localStorage.setItem( "theme" , "dark" );
     }
 });
