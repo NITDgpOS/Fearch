@@ -12,6 +12,13 @@
   "options_ui": {
     "page": "options/options.html"
   },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F"
+      }
+    }
+  },
   "permissions": ["*://www.google.com/*",
       "*://www.google.ad/*",
       "*://www.google.ae/*",

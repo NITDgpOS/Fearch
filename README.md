@@ -11,6 +11,7 @@ An extension for both Chrome and Firefox that lets you search music, videos, ebo
 5. Click on the **Load unpacked extension...** button.
 6. Browse to the place where you have unziped or pulled the repo in step 1.
 7. Extension is added to your browser. Enjoy !!
+8. Launch the extension by clicking the extension's logo or by hitting `Ctrl+Shift+F` from your keyboard.
 
 ## Setup (Firefox)
 
@@ -18,6 +19,7 @@ An extension for both Chrome and Firefox that lets you search music, videos, ebo
 2. Open Firefox, open **about:debugging** in the url
 3. Click **Load Temporary Add-on** and select any file in your **addon's directory**
 4. Extension is added to your browser. Enjoy !!
+5. Launch the extension by clicking the extension's logo or by hitting `Ctrl+Shift+F` from your keyboard.
 
 ## Issues
 
