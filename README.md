@@ -25,6 +25,14 @@ An extension for both Chrome and Firefox that lets you search music, videos, ebo
 4. Extension is added to your browser. Enjoy !!
 5. Launch the extension by clicking the extension's logo or by hitting `Ctrl+Shift+F` from your keyboard.
 
+## Screenshots
+1. Add-on pop-up
+![add-on png](https://user-images.githubusercontent.com/19359908/32234941-1ad22e04-be84-11e7-9319-19abf9dd1b4e.jpg)
+2. FTP index page
+![ftp index page](https://user-images.githubusercontent.com/19359908/32235006-48e94c78-be84-11e7-9cfd-39ac2faa4c2d.jpg)
+3. Results page
+![results page](https://user-images.githubusercontent.com/19359908/32235036-617c7c7e-be84-11e7-8600-6d5a1f82e44d.jpg)
+
 ## Issues
 
 You can post bugs found in the extension here: https://github.com/NIT-dgp/chrome-search-extension/issues
