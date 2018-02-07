@@ -101,7 +101,6 @@ input:focus {
     background: #fff;
     border-radius: 2px;
     display: inline-flex;
-    margin: 1rem;
     position: relative;
 }
 
@@ -149,4 +148,22 @@ input:focus {
     margin-top: 10px;
     float: right;
     height: 10px;
+}
+.off
+{
+    display:none;
+}
+.suggestion:hover
+{
+    background-color: #BEBEBE;
+}
+
+.suggestion
+{
+    border: 0px;
+    padding: 10px;
+    text-align: left;
+    margin-left: 20px;
+    padding-left: 13px;
+    width:84%;
 }
