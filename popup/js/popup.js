@@ -1,6 +1,3 @@
-
-// Styling content
-
 //Autofill Logic
 var tex=document.getElementById("query");
 var sug=document.getElementsByClassName("suggestion");  
@@ -9,8 +6,11 @@ function handleData(data) {
     {
         for(var i=0;i<(sug.length);i++)
             {   
-                sug[i].classList.remove("off");
-                sug[i].innerHTML=data[1][i][0];
+                if(data[1].length>0)
+                {
+                    sug[i].classList.remove("off");
+                    sug[i].innerHTML=data[1][i][0];
+                }
             }
     }
 };
@@ -26,8 +26,7 @@ tex.addEventListener("keyup",function(req,res){
     for(var i=0;i<(sug.length);i++)
     {
         sug[i].addEventListener("click",function(req,res){
-            var text=this.textContent;
-            tex.value=text;
+            tex.value=this.textContent;
             for(var i=0;i<(sug.length);i++)
             {
                 sug[i].classList.add("off");
@@ -35,11 +34,31 @@ tex.addEventListener("keyup",function(req,res){
         });
     }
     var script = document.createElement('script');
-    script.setAttribute('src','https://www.google.co.in/complete/search?client=psy-ab&hl=en-IN&gs_rn=64&gs_ri=psy-ab&tok=_vqJWTsUOepGe_q9mSti0A&cp=0&gs_id=9&q='+tex.value+'&xhr=t&callback=handleData');
+    script.setAttribute('src','https://www.google.com/complete/search?client=psy-ab&hl=en-IN&gs_rn=64&gs_ri=psy-ab&tok=_vqJWTsUOepGe_q9mSti0A&cp=0&gs_id=9&q='+tex.value+'&xhr=t&callback=handleData');
     document.body.appendChild(script);
     });
 
+//To make Suggestions Disapper when user clicks outside query field
+$(document).ready(function(){
+    $(":not(#query)").click(function(){
+        for(var i=0;i<(sug.length);i++)
+                {
+                    sug[i].classList.add("off");
+                }
+    });
+});
+tex.addEventListener("click",function(event){
+    event.stopPropagation();
+});
+// document.addEventListener("click",function(){
+//     for(var i=0;i<(sug.length);i++)
+//         {
+//             sug[i].classList.add("off");
+//         }
+// });
 
+
+// Styling content
 // Place suggestion in query box
 function suggestionAsValue() {
     var sLabel;
