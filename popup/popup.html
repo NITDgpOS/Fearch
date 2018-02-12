@@ -4,9 +4,7 @@
 <head>
     <title>Fearch</title>
     <link href="css/popup.css" rel="stylesheet" type="text/css">
-    <script src="js/popup.js"></script>
 </head>
-
 <body>
 <div id = "content">
     <div id="header">
@@ -34,13 +32,33 @@
                 </tr>
                 <tr>
                     <td>
+                        <div class="suggestion off"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="suggestion off"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="suggestion off"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="suggestion off"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td clas="rel">
                         <div id="searchWarning" style="display: none;">
                             &#9762 Please enter search query.
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td clas="rel">
                         <div id="suggest">
                             <div id="suggest-label">
                                 Manga
@@ -49,7 +67,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2">
+                    <td clas="rel" colspan="2">
                         <input type="checkbox" name="music" value="music" id="music">
                         <label for="music" title="Ctrl+Alt+m">Music</label>
                         <input type="checkbox" name="video" value="video" id="video">
@@ -60,16 +78,18 @@
                 </tr>
                 <tr>
                     <td>
-                        <div id="checkboxWarning" style="display: none;">
+                        <div clas="rel" id="checkboxWarning" style="display: none;">
                             &#9762 Please select one or more of the checkboxes.
                         </div>
                     </td>
                 </tr>
-                </table>
+            </table>
         </form>
     </div>
     <div id="footer">
     </div>
 </div>
 </body>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/popup.js"></script>
 </html>

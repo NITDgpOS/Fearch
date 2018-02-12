@@ -1,6 +1,57 @@
+//Autofill Logic
+var tex=document.getElementById("query");
+var sug=document.getElementsByClassName("suggestion");  
+function handleData(data) {
+    if(data[0]!="")
+    {
+        for(var i=0;i<(sug.length);i++)
+            {   
+                if(data[1].length>0)
+                {
+                    sug[i].classList.remove("off");
+                    sug[i].innerHTML=data[1][i][0];
+                }
+            }
+    }
+};
+tex.addEventListener("keyup",function(req,res){
+    if(tex.value=="")
+    {
+        for(var i=0;i<(sug.length);i++)
+            {
+                sug[i].innerHTML="";
+                sug[i].classList.add("off");
+            }
+    }
+    for(var i=0;i<(sug.length);i++)
+    {
+        sug[i].addEventListener("click",function(req,res){
+            tex.value=this.textContent;
+            for(var i=0;i<(sug.length);i++)
+            {
+                sug[i].classList.add("off");
+            }
+        });
+    }
+    var script = document.createElement('script');
+    script.setAttribute('src','https://www.google.com/complete/search?client=psy-ab&hl=en-IN&gs_rn=64&gs_ri=psy-ab&tok=_vqJWTsUOepGe_q9mSti0A&cp=0&gs_id=9&q='+tex.value+'&xhr=t&callback=handleData');
+    document.body.appendChild(script);
+    });
+
+//To make Suggestions Disapper when user clicks outside query field
+$(document).ready(function(){
+    $(":not(#query)").click(function(){
+        for(var i=0;i<(sug.length);i++)
+                {
+                    sug[i].classList.add("off");
+                }
+    });
+});
+tex.addEventListener("click",function(event){
+    event.stopPropagation();
+});
 
 // Styling content
-
 // Place suggestion in query box
 function suggestionAsValue() {
     var sLabel;
@@ -58,7 +109,7 @@ function register(event) {
     var dotCheck;
     var uuid;
 
-    query = document.getElementById("query").value;
+    query = tex.value;
     query = encodeURIComponent(query);
     // Note :- avoid hardcoded uuid.
     uuid = "8fd531a3ba79466f8a80e5c71dea9723";
