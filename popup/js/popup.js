@@ -50,13 +50,6 @@ $(document).ready(function(){
 tex.addEventListener("click",function(event){
     event.stopPropagation();
 });
-// document.addEventListener("click",function(){
-//     for(var i=0;i<(sug.length);i++)
-//         {
-//             sug[i].classList.add("off");
-//         }
-// });
-
 
 // Styling content
 // Place suggestion in query box
