@@ -1,14 +1,17 @@
 #sfdiv {
-    display: none;
+  display: none;
 }
+
 #hdtb-msb {
-    display: none;
+  display: none;
 }
+
 #sbds {
-    display: none;
+  display: none;
 }
-#fearchText{
-    padding: 13px;
-    font-size: 200%;
-    color: #6a6a6a;
+
+#fearchText {
+  padding: 13px;
+  font-size: 200%;
+  color: #6a6a6a;
 }
