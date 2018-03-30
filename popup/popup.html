@@ -25,7 +25,7 @@
                 <tr>
                     <td>
                         <div id="searchBox" class="card">
-                            <input type="text" name="songname" id="query" placeholder="Search here" />
+                            <input required="required" autocomplete="off" autofocus readonly onfocus="this.removeAttribute('readonly');" type="text" name="songname" id="query" placeholder="Search here" />
                             <button id="searchButton">
                                 <img src="images/searchIcon.png" alt="Search" id="searchIcon">
                             </button>
