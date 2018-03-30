@@ -2,74 +2,75 @@
 <html>
 
 <head>
-    <title>Fearch</title>
-    <link href="css/popup.css" rel="stylesheet" type="text/css">
-    <script src="js/popup.js"></script>
+  <title>Fearch</title>
+  <link href="css/popup.css" rel="stylesheet" type="text/css">
+  <script src="js/popup.js"></script>
 </head>
 
 <body>
-<div id = "content">
+  <div id="content">
     <div id="header">
-        <div class="gear">
-            <a href="../options/options.html" >
+      <div class="gear">
+        <a href="../options/options.html">
                 <img src="images/gear-icon.svg" height="24px" width="24px">
             </a>
-        </div>
-        <h1>
+      </div>
+      <h1>
             <span style="color:#4285f4">F</span><span style="color:#ea4335">e</span><span style="color:#fbbc05">a</span><span style="color:#4285f4">r</span><span style="color:#34a853">c</span><span style="color:#ea4335">h</span>
         </h1>
     </div>
     <div id="main">
-        <form>
-            <table>
-                <tr>
-                    <td>
-                        <div id="searchBox" class="card">
-                            <input required="required" autocomplete="off" autofocus readonly onfocus="this.removeAttribute('readonly');" type="text" name="songname" id="query" placeholder="Search here" />
-                            <button id="searchButton">
-                                <img src="images/searchIcon.png" alt="Search" id="searchIcon">
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="searchWarning" style="display: none;">
-                            &#9762 Please enter search query.
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="suggest">
-                            <div id="suggest-label">
-                                Manga
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="checkbox" name="music" value="music" id="music">
-                        <label for="music" title="Ctrl+Alt+m">Music</label>
-                        <input type="checkbox" name="video" value="video" id="video">
-                        <label for="video" title="Ctrl+Alt+v">Video</label>
-                        <input type="checkbox" name="books" value="books" id="books">
-                        <label for="books" title="Ctrl+Alt+b">Books</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id="checkboxWarning" style="display: none;">
-                            &#9762 Please select one or more of the checkboxes.
-                        </div>
-                    </td>
-                </tr>
-                </table>
-        </form>
+      <form>
+        <table>
+          <tr>
+            <td>
+              <div id="searchBox" class="card">
+                <input required="required" autocomplete="off" autofocus readonly onfocus="this.removeAttribute('readonly');" type="text" name="songname" id="query" placeholder="Search here" />
+                <button id="searchButton">
+                <img src="images/searchIcon.png" alt="Search" id="searchIcon">
+              </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div id="searchWarning" style="display: none;">
+                &#9762 Please enter search query.
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div id="suggest">
+                <div id="suggest-label">
+                  Manga
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="checkbox" name="music" value="music" id="music" checked>
+              <label for="music" title="Ctrl+Alt+m">Music</label>
+              <input type="checkbox" name="video" value="video" id="video">
+              <label for="video" title="Ctrl+Alt+v">Video</label>
+              <input type="checkbox" name="books" value="books" id="books">
+              <label for="books" title="Ctrl+Alt+b">Books</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div id="checkboxWarning" style="display: none;">
+                &#9762 Please select one or more of the checkboxes.
+              </div>
+            </td>
+          </tr>
+        </table>
+      </form>
     </div>
     <div id="footer">
     </div>
-</div>
+  </div>
 </body>
+
 </html>
