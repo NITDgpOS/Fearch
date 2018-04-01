@@ -39,13 +39,11 @@ tex.addEventListener("keyup",function(req,res){
     });
 
 //To make Suggestions Disapper when user clicks outside query field
-$(document).ready(function(){
-    $(":not(#query)").click(function(){
-        for(var i=0;i<(sug.length);i++)
-                {
-                    sug[i].classList.add("off");
-                }
-    });
+document.body.addEventListener("click", function(){
+    for(var i=0;i<(sug.length);i++)
+            {
+                sug[i].classList.add("off");
+            }
 });
 tex.addEventListener("click",function(event){
     event.stopPropagation();
