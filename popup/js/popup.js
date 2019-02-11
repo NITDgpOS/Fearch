@@ -148,14 +148,14 @@ function register(event) {
         }
         /* eslint-disable */
          
-        var sLink=[];
+        var saveURL=[];
         if(localStorage.getItem('link'))
-        sLink=JSON.parse(localStorage.getItem('link'));
+        saveURL=JSON.parse(localStorage.getItem('link'));
         var sPhrase="http://www.google.com/search?q="+query+" -"+uuid+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")";
-        if(sPhrase!="" && sLink.indexOf(sPhrase)==-1)
+        if(sPhrase!="" && saveURL.indexOf(sPhrase)==-1)
         {
-        sLink.push(sPhrase);
-        localStorage.setItem('link',JSON.stringify(sLink));
+        saveURL.push(sPhrase);
+        localStorage.setItem('link',JSON.stringify(saveURL));
         }
 
         window.open("http://www.google.com/search?q="+query+" -"+uuid+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")");
@@ -224,14 +224,14 @@ function themeChange() {
 function recordSearchHistory()
 {
 
-        var sHist=[];
+        var saveQuery=[];
         if(localStorage.getItem('search'))
-        sHist=JSON.parse(localStorage.getItem('search'));
+        saveQuery=JSON.parse(localStorage.getItem('search'));
         var x=text.value;
-        if(x!="" && sHist.indexOf(x)==-1)
+        if(x!="" && saveQuery.indexOf(x)==-1)
         {
-        sHist.push(x);
-        localStorage.setItem('search',JSON.stringify(sHist));
+        saveQuery.push(x);
+        localStorage.setItem('search',JSON.stringify(saveQuery));
         }
 }
 

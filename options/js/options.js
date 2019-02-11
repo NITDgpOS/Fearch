@@ -1,6 +1,6 @@
-var histo=[];
-var histLink=[];
-var radios = document.getElementById('them');
+var retrieveQuery=[];
+var retrieveURL=[];
+var toggle = document.getElementById('them');
 
 if(!localStorage.getItem('theme'))
     localStorage.setItem('theme', 'light');
@@ -8,41 +8,41 @@ if(!localStorage.getItem('theme'))
 if(localStorage.getItem('theme') == 'light')
 {
     console.log("light");
-    radios.checked = false;
+    toggle.checked = false;
 }
 else
 {
     console.log("dark");
-    radios.checked = true;
+    toggle.checked = true;
 }
 
 function handleThemeChange(event) {
-    if(radios.checked == false)
+    if (toggle.checked==false)
         localStorage.setItem('theme', 'light');
     else
         localStorage.setItem('theme', 'dark');
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    var radios = document.getElementById('them');
-    radios.addEventListener('click', handleThemeChange);
+    var toggle = document.getElementById('them');
+    toggle.addEventListener('click', handleThemeChange);
 });
 
-var mydiv = document.getElementById("hList");
-var histButton = document.querySelector("#histClear");
+var mydiv = document.getElementById("historyList");
+var clearHistory = document.querySelector("#clearButton");
 
-histo=(JSON.parse(localStorage.getItem('search')));
-histLink=(JSON.parse(localStorage.getItem('link')));
+retrieveQuery=(JSON.parse(localStorage.getItem('search')));
+retrieveURL=(JSON.parse(localStorage.getItem('link')));
 
 mydiv.textContent="";
 var count=0;
-histo.forEach(function(entr)
+retrieveQuery.forEach(function(entr)
 {
 
     
     var aTag = document.createElement('a');
     aTag.setAttribute('target','_blank')
-    aTag.setAttribute('href',histLink[count]);
+    aTag.setAttribute('href',retrieveURL[count]);
     aTag.innerHTML = entr;
     mydiv.appendChild(aTag);
     var mybr = document.createElement('br');
@@ -54,19 +54,9 @@ histo.forEach(function(entr)
 })
 
 
-histButton.addEventListener("mouseover",function()
-{
-    document.getElementById("xadd").innerHTML="X";
 
-});
 
-histButton.addEventListener("mouseout",function()
-{
-    document.getElementById("xadd").innerHTML="";
-
-});
-
-histButton.addEventListener("click",function()
+clearHistory.addEventListener("click",function()
 {
     localStorage.clear();
     location.reload();
