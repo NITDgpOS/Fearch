@@ -148,14 +148,14 @@ function register(event) {
         }
         /* eslint-disable */
          
-        var saveURL=[];
+        var recentSearchQueryUrls=[];
         if(localStorage.getItem('link'))
-        saveURL=JSON.parse(localStorage.getItem('link'));
+        recentSearchQueryUrls=JSON.parse(localStorage.getItem('link'));
         var sPhrase="http://www.google.com/search?q="+query+" -"+uuid+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")";
-        if(sPhrase!="" && saveURL.indexOf(sPhrase)==-1)
+        if(sPhrase!="" && recentSearchQueryUrls.indexOf(sPhrase)==-1)
         {
-        saveURL.push(sPhrase);
-        localStorage.setItem('link',JSON.stringify(saveURL));
+        recentSearchQueryUrls.push(sPhrase);
+        localStorage.setItem('link',JSON.stringify(recentSearchQueryUrls));
         }
 
         window.open("http://www.google.com/search?q="+query+" -"+uuid+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")");
@@ -224,14 +224,14 @@ function themeChange() {
 function recordSearchHistory()
 {
 
-        var saveQuery=[];
+        var recentSearchQueries=[];
         if(localStorage.getItem('search'))
-        saveQuery=JSON.parse(localStorage.getItem('search'));
+        recentSearchQueries=JSON.parse(localStorage.getItem('search'));
         var x=text.value;
-        if(x!="" && saveQuery.indexOf(x)==-1)
+        if(x!="" && recentSearchQueries.indexOf(x)==-1)
         {
-        saveQuery.push(x);
-        localStorage.setItem('search',JSON.stringify(saveQuery));
+        recentSearchQueries.push(x);
+        localStorage.setItem('search',JSON.stringify(recentSearchQueries));
         }
 }
 

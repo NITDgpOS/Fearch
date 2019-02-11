@@ -1,6 +1,6 @@
-var retrieveQuery=[];
-var retrieveURL=[];
-var toggle = document.getElementById('them');
+var recentSearchQueries=[];
+var recentSearchQueryUrls=[];
+var toggle = document.getElementById('theme');
 
 if(!localStorage.getItem('theme'))
     localStorage.setItem('theme', 'light');
@@ -24,31 +24,31 @@ function handleThemeChange(event) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    var toggle = document.getElementById('them');
+    var toggle = document.getElementById('theme');
     toggle.addEventListener('click', handleThemeChange);
 });
 
-var mydiv = document.getElementById("historyList");
+var historyListElement = document.getElementById("historyList");
 var clearHistory = document.querySelector("#clearButton");
 
-retrieveQuery=(JSON.parse(localStorage.getItem('search')));
-retrieveURL=(JSON.parse(localStorage.getItem('link')));
+recentSearchQueries=(JSON.parse(localStorage.getItem('search')));
+recentSearchQueryUrls=(JSON.parse(localStorage.getItem('link')));
 
-mydiv.textContent="";
+historyListElement.textContent="";
 var count=0;
-retrieveQuery.forEach(function(entr)
+recentSearchQueries.forEach(function(entr)
 {
 
     
     var aTag = document.createElement('a');
     aTag.setAttribute('target','_blank')
-    aTag.setAttribute('href',retrieveURL[count]);
+    aTag.setAttribute('href',recentSearchQueryUrls[count]);
     aTag.innerHTML = entr;
-    mydiv.appendChild(aTag);
+    historyListElement.appendChild(aTag);
     var mybr = document.createElement('br');
-    mydiv.appendChild(mybr);
+    historyListElement.appendChild(mybr);
     var myhr = document.createElement('hr');
-    mydiv.appendChild(myhr);
+    historyListElement.appendChild(myhr);
     count++;
 
 })
