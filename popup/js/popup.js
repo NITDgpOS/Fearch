@@ -107,6 +107,7 @@ function register(event) {
     var dotCheck;
     var uuid;
 
+
     query = text.value;
     query = encodeURIComponent(query);
     // Note :- avoid hardcoded uuid.
@@ -146,6 +147,17 @@ function register(event) {
             formats = formats + "|" + suggestedFormat;
         }
         /* eslint-disable */
+         
+        var sLink=[];
+        if(localStorage.getItem('link'))
+        sLink=JSON.parse(localStorage.getItem('link'));
+        var sPhrase="http://www.google.com/search?q="+query+" -"+uuid+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")";
+        if(sPhrase!="" && sLink.indexOf(sPhrase)==-1)
+        {
+        sLink.push(sPhrase);
+        localStorage.setItem('link',JSON.stringify(sLink));
+        }
+
         window.open("http://www.google.com/search?q="+query+" -"+uuid+" -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ("+formats+")");
         /* eslint-enable */
     } else {
@@ -209,9 +221,27 @@ function themeChange() {
 
 }
 
+function recordSearchHistory()
+{
+
+        var sHist=[];
+        if(localStorage.getItem('search'))
+        sHist=JSON.parse(localStorage.getItem('search'));
+        var x=text.value;
+        if(x!="" && sHist.indexOf(x)==-1)
+        {
+        sHist.push(x);
+        localStorage.setItem('search',JSON.stringify(sHist));
+        }
+}
+
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector("button").addEventListener("click", register);
+    document.querySelector("button").addEventListener("click",function()
+    {
+       recordSearchHistory();
+        register();
+    } );
     document.addEventListener("keyup", keyboardShortCutListener, false);
     suggestion();
     suggestionAsValue();

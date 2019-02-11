@@ -4,21 +4,37 @@
 <head>
     <title>Fearch - Options</title>
     <link href="css/options.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"> 
     <meta charset="utf-8">
 </head>
-
 <body>
     <div class="main">
+        <a href="../popup/popup.html" id="backB" >
+            <img src="images2/backbutton.jpg" height="24px" width="24px">
+        </a>
         <form>
-            <label>
-                <b>Select theme</b>
-                <br />
-                <input type="radio" name="theme" value="light"> Light<br>
-                <input type="radio" name="theme" value="dark"> Dark<br>
+            <br/>
+            <h2 id="tHead">THEME</h2>
+            <label class="switch">
+                <input type="checkbox" name="theme" id="them">
+                <span class="slider round"></span>
             </label>
         </form>
+        <br/>
+        <hr/>
+        <div id="searchHistory">
+            <h2 id="histHead">HISTORY</h2>
+            <div id="hList">
+                
+            </div>
+            <br/>
+            <div id="cHist">
+                <button id="histClear">CLEAR HISTORY <span id="xadd"></span> </button>
+               
+            </div>
+        </div>
     </div>
     <script src="js/options.js"></script>
 </body>
-
 </html>
