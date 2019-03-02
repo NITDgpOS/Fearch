@@ -1,4 +1,3 @@
-/* eslint-disable vars-on-top */
 var recentSearchQueries = [];
 var recentSearchQueryUrls = [];
 var historyListElement;

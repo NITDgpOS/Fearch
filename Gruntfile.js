@@ -5,7 +5,7 @@ module.exports = function (grunt) {
             options: {
                 fix: false
             },
-            target: ["*.js"]
+            target: ["**/*.js", "!node_module/**/*.js"]
         }
     });
 

@@ -1,5 +1,4 @@
 /* eslint-disable func-names */
-/* eslint-disable vars-on-top */
 // Autofill Logic
 var text = document.getElementById("query");
 var suggestions = document.getElementsByClassName("suggestion");
@@ -198,7 +197,6 @@ function suggestion() {
     document.getElementById("suggest-label").innerHTML = suggestions[random];
 }
 
-/* eslint-disable vars-on-top */
 var theme;
 
 function themeChange() {
