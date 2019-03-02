@@ -11,6 +11,11 @@
     "no-var": "off",
     "indent": ["error", 4],
     "quotes": ["error", "double"],
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "max-len": ["error", { "code": 80 }],
+    "no-restricted-globals": "warn",
+    "no-unused-vars": "warn",
+    "no-shadow":"warn",
+    "vars-on-top":"warn"
   }
 }
