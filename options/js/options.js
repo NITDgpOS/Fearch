@@ -1,64 +1,52 @@
-var recentSearchQueries=[];
-var recentSearchQueryUrls=[];
-var toggle = document.getElementById('theme');
+/* eslint-disable vars-on-top */
+var recentSearchQueries = [];
+var recentSearchQueryUrls = [];
+var historyListElement;
+var clearHistory;
+var count;
+var themeToggle = document.getElementById("theme");
 
-if(!localStorage.getItem('theme'))
-    localStorage.setItem('theme', 'light');
+if (!localStorage.getItem("theme")) localStorage.setItem("theme", "light");
 
-if(localStorage.getItem('theme') == 'light')
-{
-    console.log("light");
-    toggle.checked = false;
-}
-else
-{
-    console.log("dark");
-    toggle.checked = true;
+if (localStorage.getItem("theme") === "light") {
+    themeToggle.checked = false;
+} else {
+    themeToggle.checked = true;
 }
 
 function handleThemeChange(event) {
-    if (toggle.checked==false)
-        localStorage.setItem('theme', 'light');
-    else
-        localStorage.setItem('theme', 'dark');
+    if (themeToggle.checked === false) localStorage.setItem("theme", "light");
+    else localStorage.setItem("theme", "dark");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    var toggle = document.getElementById('theme');
-    toggle.addEventListener('click', handleThemeChange);
+    themeToggle = document.getElementById("theme");
+    themeToggle.addEventListener("click", handleThemeChange);
 });
 
-var historyListElement = document.getElementById("historyList");
-var clearHistory = document.querySelector("#clearButton");
+historyListElement = document.getElementById("historyList");
+clearHistory = document.querySelector("#clearButton");
 
-recentSearchQueries=(JSON.parse(localStorage.getItem('search')));
-recentSearchQueryUrls=(JSON.parse(localStorage.getItem('link')));
+recentSearchQueries = (JSON.parse(localStorage.getItem("search")));
+recentSearchQueryUrls = (JSON.parse(localStorage.getItem("link")));
 
-historyListElement.textContent="";
-var count=0;
-recentSearchQueries.forEach(function(entr)
-{
-
-    
-    var aTag = document.createElement('a');
-    aTag.setAttribute('target','_blank')
-    aTag.setAttribute('href',recentSearchQueryUrls[count]);
+historyListElement.textContent = "";
+count = 0;
+recentSearchQueries.forEach(function (entr) {
+    var aTag = document.createElement("a");
+    aTag.setAttribute("target", "_blank");
+    aTag.setAttribute("href", recentSearchQueryUrls[count]);
     aTag.innerHTML = entr;
     historyListElement.appendChild(aTag);
-    var mybr = document.createElement('br');
-    historyListElement.appendChild(mybr);
-    var myhr = document.createElement('hr');
-    historyListElement.appendChild(myhr);
-    count++;
-
-})
-
+    var br = document.createElement("br");
+    historyListElement.appendChild(br);
+    var hr = document.createElement("hr");
+    historyListElement.appendChild(hr);
+    count += 1;
+});
 
 
-
-clearHistory.addEventListener("click",function()
-{
+clearHistory.addEventListener("click", function () {
     localStorage.clear();
     location.reload();
-
 });
