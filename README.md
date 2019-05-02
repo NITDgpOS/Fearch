@@ -25,6 +25,14 @@ An extension for both Chrome and Firefox that lets you search music, videos, ebo
 4. Extension is added to your browser. Enjoy !!
 5. Launch the extension by clicking the extension's logo or by hitting `Ctrl+Shift+F` from your keyboard.
 
+## Fearch Extension for Google Chrome
+
+	[Download From Chrome Webstore](https://chrome.google.com/webstore/detail/fearch/kalmlbhhgndofalfencmggfncedfajgj?hl=en)
+
+## Fearch Extension for Google Chrome
+
+	[Download From Firefox AMO](https://addons.mozilla.org/en-US/firefox/addon/fearchit/?src=userprofile)
+
 ## Issues
 
 You can post bugs found in the extension here: https://github.com/NIT-dgp/chrome-search-extension/issues
